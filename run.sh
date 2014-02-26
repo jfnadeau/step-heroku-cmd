@@ -100,8 +100,8 @@ if [ -n "$WERCKER_HEROKU_CMD_RUN" ]
 then
     run_command="$WERCKER_HEROKU_CMD_RUN"
 
-    debug "starting heroku run $run_command"
-    heroku "$run_command" --app $HEROKU_APP_NAME
+    debug "starting heroku $run_command"
+    heroku $run_command --app $HEROKU_APP_NAME
     exit_code_run=$?
 fi
 
